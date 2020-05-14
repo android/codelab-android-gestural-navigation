@@ -34,7 +34,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.android.uamp.R
 import com.example.android.uamp.utils.InjectorUtils
-import com.example.android.uamp.view.MySeekBar
 import com.example.android.uamp.viewmodels.MainActivityViewModel
 import com.example.android.uamp.viewmodels.NowPlayingFragmentViewModel
 import com.example.android.uamp.viewmodels.NowPlayingFragmentViewModel.NowPlayingMetadata
@@ -55,14 +54,6 @@ class NowPlayingFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_nowplaying, container, false)
 
-        playerView = view.findViewById(R.id.playerLayout)
-        val initialPadding = playerView.paddingBottom
-
-        playerView.setOnApplyWindowInsetsListener { view, insets ->
-            view.updatePadding(bottom = insets.systemWindowInsetBottom + initialPadding)
-            insets
-        }
-
         return view
     }
 
@@ -72,7 +63,7 @@ class NowPlayingFragment : Fragment() {
         // Always true, but lets lint know that as well.
         val context = activity ?: return
 
-        val positionSeekBar: MySeekBar = view.findViewById<MySeekBar>(R.id.seekBar)
+        val positionSeekBar: SeekBar = view.findViewById<SeekBar>(R.id.seekBar)
             .apply { progress = 0 }
 
         // Inject our activity and view models into this fragment

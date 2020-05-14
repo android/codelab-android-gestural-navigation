@@ -17,10 +17,6 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Step 1 change navigation bar color -->
-        <item name="android:navigationBarColor"> @android:color/transparent</item>
-        <!-- Step 2 change navigation bar color -->
-        <item name="android:statusBarColor"> @android:color/transparent</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

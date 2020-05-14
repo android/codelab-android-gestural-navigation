@@ -36,11 +36,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val content: FrameLayout = findViewById(R.id.fragmentContainer)
-        content.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-
         // Since UAMP is a music player, the volume controls should adjust the music volume while
         // in the app.
         volumeControlStream = AudioManager.STREAM_MUSIC
